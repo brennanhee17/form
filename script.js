@@ -29,13 +29,13 @@ submitEl.addEventListener("click", (e) => {
 //     console.log(key[0] + " -> " + key[1]);
 //   }
 
-  var elements = document.getElementById("form").elements;
+  // var elements = document.getElementById("form").elements;
 
-  for (var i = 0, element; element = elements[i++];) {
-      if (element.type === "text" && element.value === "")
-          console.log("it's an empty textfield")
-          console.log(elements);
-  }
+  // for (var i = 0, element; element = elements[i++];) {
+  //     if (element.type === "text" && element.value === "")
+  //         console.log("it's an empty textfield")
+  //         console.log(elements);
+  // }
 
 // if (fname.value === "") {
 //     fname.classList.add("error");
