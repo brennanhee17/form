@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+      <form id="form" action="" method="get" class="formA">
+        <div class="form1">
+          <label for="fname"> First name: </label>
+          <input class="formA" type="text" name="first name" id="fname" placeholder="John" max="50" required>
+        </div><br>
+        <div class="form1">
+            <label for="lname"> Last name: </label>
+            <input class="formA" type="text" name="last name" id="lname" placeholder="Doe" max="50" required>
+          </div><br>
+        <div class="form1">
+          <label for="email"> Email: </label>
+          <input class="formA" type="email" name="email" id="email" placeholder="example@example.com" max="50" required>
+        </div><br>
+        <div class="form1">
+            <label for="phone"> Phone number: </label>
+            <input class="formA" type="tel" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder= "123-456-7890" max="50" required>
+        </div><br>
+        <div class="form1">
+            <label for="street"> Street: </label>
+            <input class="formA" type="text" name="street" id="inputStreet" placeholder="123 Main St" max="50" required>
+        </div><br>
+        <div class="form1">
+            <label for="apartment"> Apartment or unit number: </label>
+            <input class="formA" type="text" name="aparment" id="inputApartment" placeholder="123" max="50">
+        </div><br>
+        <div class="form1">
+            <label for="city"> City: </label>
+            <input class="formA" type="text" name="city" id="inputCity" required max="50">
+        </div><br>
+        <div class="form1">
+            <label for="state"> State: </label>
+            <input class="formA" type="text" name="state" id="inputState" required max="2">
+        </div><br>
+        <div class="form1">
+            <label for="zip"> Zip: </label>
+            <input class="formA" type="text" name="zip" id="inputZip" required max="5">
+        </div><br>
+        <div class="form1">
+            <label for="pass"> Password (8 characters minimum):</label>
+            <input class="formA" type="password" id="pass" name="password" minlength="8" required>
+        </div><br>
+        <div class="form1">
+          <input class="submit" type="submit" value="submit">
+        </div>
+      </form>
+      <!-- <div id="output"></div> -->
+      <!-- <output id="output"></output> -->
+  </body>
+</html>
