@@ -51,3 +51,8 @@ body {
 .success {
   border: 2px solid green;
 }
+
+.blank {
+  background: rgb(202, 202, 202);
+  border: 2px solid grey;
+}

@@ -13,13 +13,17 @@ submitEl.addEventListener("click", (e) => {
   for (var i = 0; i < elements.length; i++) {
     formData.append(elements[i].name, elements[i].value);
     if (elements[i].value === "") {
-      validation = false;
-      elements[i].classList.add("error");
+      if (elements[i].name === "apartment") {
+        validation = true;
+        elements[i].classList.add("blank");
+      } else {
+        validation = false;
+        elements[i].classList.add("error");
+      }
     } else if (elements[i].name === "email") {
       if (validateEmail(email.value)) {
         validation = true;
         elements[i].classList.add("success");
-        console.log(elements[i]);
       } else {
         validation = false;
         elements[i].classList.add("error");
