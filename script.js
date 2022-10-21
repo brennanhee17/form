@@ -3,6 +3,8 @@ let submitEl = document.querySelector(".submit");
 var elements = document.querySelector(".formA");
 
 let validation = true;
+var phoneFormat = /^\d{3}-\d{3}-\d{4}$/;
+var mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
 submitEl.addEventListener("click", (e) => {
   e.preventDefault();
@@ -14,54 +16,46 @@ submitEl.addEventListener("click", (e) => {
     formData.append(elements[i].name, elements[i].value);
     if (elements[i].value === "") {
       if (elements[i].name === "apartment") {
-        validation = true;
         elements[i].classList.add("blank");
       } else {
         validation = false;
         elements[i].classList.add("error");
       }
     } else if (elements[i].name === "email") {
-      if (validateEmail(email.value)) {
-        validation = true;
+      if (email.value.match(mailFormat)) {
         elements[i].classList.add("success");
       } else {
         validation = false;
         elements[i].classList.add("error");
       }
     } else if (elements[i].name === "phone") {
-      if (validatePhone(phone.value)) {
-        validation = true;
+      if (phone.value.match(phoneFormat)) {
         elements[i].classList.add("success");
       } else {
         validation = false;
         elements[i].classList.add("error");
       }
     } else {
-      validation = true;
       elements[i].classList.add("success");
     }
   }
 });
 
-function validateEmail(inputText) {
-  var mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-  if (inputText.match(mailFormat)) {
-    alert("Valid email address!");
-    return true;
-  } else {
-    return false;
-  }
-}
+// function validateEmail(inputText) {
+//   var mailFormat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+//   if (inputText.match(mailFormat)) {
+//     alert("Valid email address!");
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
 
-function validatePhone(inputText) {
-  var phoneFormat = /^\d{3}-\d{3}-\d{4}$/;
-  if (inputText.match(phoneFormat)) {
-    alert("Valid phone number!");
-    return true;
-  } else {
-    return false;
-  }
-}
+// function validatePhone(inputText) {
+//   var phoneFormat = /^\d{3}-\d{3}-\d{4}$/;
+//   return (inputText.match(phoneFormat)) ;
+//   }
+
 
 // function isValid(form) {
 //   if (form === true) {
