@@ -3,22 +3,101 @@
 body {
   height: 100vh;
   font-family: 'Roboto', sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.4rem;
+  margin: 0;
 }
 
 .header {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}  
-  
-.main-nav a {
-    padding: 5px 10px;
-    text-decoration: none;
-    color: rgb(24, 24, 24);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  padding: 1.5rem;
+  font-weight: 700;
+  font-size: 0.8em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
-  
-  /* Style the active/current link*/
-  .header a.active {
-    text-decoration: underline;
+
+.logo-container img {
+  width: 100px;
+}
+
+.main-nav a {
+  padding: 5px 10px;
+  text-decoration: none;
+  color: rgb(24, 24, 24);
+}
+
+/* Style the active/current link*/
+.header a.active {
+  text-decoration: underline;
+}
+
+.hero {
+  width: 100%;
+  height: 400px;
+  background-color: blue;
+}
+
+.info {
+  width: 100%;
+  background-color: rgb(226, 226, 226);
+}
+
+.info h1 {
+  padding: 2rem 0 0 2rem;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1rem;
+}
+
+.info p {
+  padding: 1rem 2rem 2rem 2rem;
+  margin: 0;
+}
+
+.cta-section {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.cta {
+  flex-basis: 50%;
+  background-color: rgb(236, 236, 236);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cta p {
+  padding: 3rem 1rem 0 1rem;
+  margin: 0;
+}
+
+.cta button {
+  width: 30%;
+  margin: 0.5rem 1rem 3rem 1rem;
+  background-color: rgb(60, 179, 252);
+  border: none;
+  border-radius: 15px;
+  padding: 5px 10px;
+  text-align: center;
+  color: white;
+}
+
+.footer {
+  width: 100%;
+  height: 400px;
+  background-color: rgb(28, 28, 28);
+}
+
+@media screen and (max-width: 600px) {
+  .cta {
+    flex-basis: 100%;
   }
-  
+}
