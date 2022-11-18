@@ -38,29 +38,79 @@ body {
 .hero {
   width: 100%;
   height: 400px;
-  background-color: blue;
+  background-image: url(assets/technology-in-the-workplace.png);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-cta {
+  font-size: 4rem;
+  margin: 1rem 0rem;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-shadow: 0px 2px 15px rgba(77, 6, 86, 0.5);
+}
+
+.hero-button button {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 1rem;
+  text-transform: uppercase;
+  background-color: rgb(60, 179, 252);
+  box-shadow: 2px 2px 10px rgba(77, 6, 86, 0.5);
+  border: none;
+  border-radius: 25px;
+  padding: 10px 25px;
+  text-align: center;
+  color: white;
+  transition: 0.2s ease-in-out;
+}
+
+.hero-button button:hover {
+  background-color: rgb(26, 116, 171);
+  cursor: pointer;
 }
 
 .info {
   width: 100%;
+  margin: 0 auto;
   background-color: rgb(226, 226, 226);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.info__container {
+  width: 80%;
 }
 
 .info h1 {
-  padding: 2rem 0 0 2rem;
-  margin: 0;
+  padding: 25px 0 0 15px;
+  margin: 10px 0 0 0;
   text-transform: uppercase;
-  letter-spacing: 2px;
   font-size: 1rem;
 }
 
 .info p {
-  padding: 1rem 2rem 2rem 2rem;
-  margin: 0;
+  padding: 15px;  
+  margin: 0 0 25px 0;
 }
 
 .cta-section {
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cta-section__container {
+  width: 80%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -68,7 +118,6 @@ body {
 
 .cta {
   flex-basis: 50%;
-  background-color: rgb(236, 236, 236);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -92,12 +141,80 @@ body {
 
 .footer {
   width: 100%;
-  height: 400px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   background-color: rgb(28, 28, 28);
+  display: flex;
+  justify-content: center;
+  font-size: 10px;
+}
+
+.footer__column-container {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.footer .footer__column {
+  flex-basis: 33%;
+  color: #cccccc;
+  padding: 15px;
+}
+
+.footer > div > div:nth-child(3) {
+  text-align: right !important;
+}
+
+.footer__column ul {
+  padding: 0;
+}
+
+.footer__column ul li {
+  list-style-type: none;
+}
+
+#sitemap {
+  display: flex;
+  flex-direction: row;
+}
+
+#sitemap li {
+  margin-right: 5px;
+}
+
+#sitemap li a, #contact-info a {
+  color: #cccccc;
+  text-decoration: none;
+  transition: 0.2s ease-in-out;
+}
+
+#sitemap li a:hover, #contact-info a:hover {
+  color: rgb(60, 179, 252);
+}
+
+#copyright {
+  padding: 10px;
+  text-align: center;
+  background-color: black;
+  color: #ffffff;
+  font-size: 8px;
 }
 
 @media screen and (max-width: 600px) {
   .cta {
+    flex-basis: 100%;
+  }
+
+  .hero-cta {
+    font-size: 2rem;
+  }
+
+  .footer__column-container {
+    flex-wrap: wrap;
+  }
+
+  .footer .footer__column {
     flex-basis: 100%;
   }
 }
