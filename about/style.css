@@ -35,6 +35,36 @@ body {
   text-decoration: underline;
 }
 
+.achieve {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: rgb(225, 225, 225);
+  display: flex;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.achieve-header {
+  align-content: center;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+}
+
+.achieve__column-container {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.achieve .achieve__column {
+  flex-basis: 33%;
+  color: black;
+  padding: 15px;
+}
+
 .footer {
   width: 100%;
   padding-top: 50px;
@@ -106,6 +136,14 @@ body {
 
   .hero-cta {
     font-size: 2rem;
+  }
+
+  .achieve__column-container {
+    flex-wrap: wrap;
+  }
+
+  .achieve .achieve__column {
+    flex-basis: 100%;
   }
 
   .footer__column-container {
