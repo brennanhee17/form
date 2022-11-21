@@ -41,6 +41,7 @@ body {
   padding-bottom: 50px;
   background-color: rgb(225, 225, 225);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   font-size: 14px;
 }
@@ -53,16 +54,24 @@ body {
 }
 
 .achieve__column-container {
+  margin: 0px 250px 0px 250px;
   width: 80%;
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
-.achieve .achieve__column {
-  flex-basis: 33%;
+.achieve__column {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;  flex-basis: 33%;
   color: black;
   padding: 15px;
+}
+
+.achieve__column .p {
+  display: flex;
+  justify-content: center;
 }
 
 .footer {
