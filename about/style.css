@@ -35,6 +35,31 @@ body {
   text-decoration: underline;
 }
 
+.info {
+  width: 100%;
+  margin: 0 auto;
+  background-color: rgba(243,235,255,255);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.info__container {
+  width: 80%;
+}
+
+.info h1 {
+  padding: 25px 0 0 15px;
+  margin: 10px 0 0 0;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.info p {
+  padding: 15px;
+  margin: 0 0 25px 0;
+}
+
 .achieve {
   width: 100%;
   padding-top: 50px;
@@ -54,7 +79,6 @@ body {
 }
 
 .achieve__column-container {
-  margin: 0px 250px 0px 250px;
   width: 80%;
   display: flex;
   flex-direction: row;
